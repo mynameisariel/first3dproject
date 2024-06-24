@@ -12,13 +12,13 @@ const mesh = new THREE.Mesh(geometry, material);
 scene.add(mesh);
 
 // Light
-const light = new THREE.PointLight(0xffffff, 1, 100);
+const light = new THREE.PointLight(0xffffff, 70, 100);
 light.position.set(0, 10, 10);
 scene.add(light);
 
 // Camera
 const camera = new THREE.PerspectiveCamera(45, 800 / 600, 0.1, 200);
-camera.position.z = 20;
+camera.position.z = 10;
 scene.add(camera);
 
 // Renderer - need to render scene on screen using canvas
