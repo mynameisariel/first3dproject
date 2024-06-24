@@ -1,5 +1,6 @@
 import * as THREE from "three";
 import "./style.css";
+import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
 
 // Scene
 const scene = new THREE.Scene();
@@ -38,6 +39,9 @@ const canvas = document.querySelector(".webgl");
 const renderer = new THREE.WebGLRenderer({ canvas });
 renderer.setSize(sizes.width, sizes.height);
 renderer.render(scene, camera);
+
+// Controls
+const controls = new OrbitControls(camera, canvas);
 
 // Resize
 window.addEventListener("resize", () => {
