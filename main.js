@@ -15,6 +15,12 @@ const material = new THREE.MeshStandardMaterial({
 const mesh = new THREE.Mesh(geometry, material);
 scene.add(mesh);
 
+// create cube
+const cGeometry = new THREE.BoxGeometry(1, 1, 1);
+const cMaterial = new THREE.MeshBasicMaterial({ color: 0x00ff00 });
+const cube = new THREE.Mesh(cGeometry, cMaterial);
+scene.add(cube);
+
 // Sizes
 const sizes = {
   width: window.innerWidth,
@@ -76,6 +82,7 @@ const tl = gsap.timeline({ defaults: { duration: 1 } });
 tl.fromTo(mesh.scale, { z: 0, x: 0, y: 0 }, { z: 1, x: 1, y: 1 });
 tl.fromTo("nav", { y: "-100%" }, { y: "0%" });
 tl.fromTo(".title", { opacity: 0 }, { opacity: 1 });
+tl.fromTo(".paragraph", { opacity: 0 }, { opacity: 1 });
 
 // Mouse animation colour
 let mouseDown = false;

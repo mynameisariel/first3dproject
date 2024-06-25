@@ -46,3 +46,13 @@ nav ul {
   top: 75%;
   transform: translate(-50%, -75%);
 }
+
+.paragraph {
+  color: white;
+  z-index: 2;
+  position: absolute;
+  font-size: 2rem;
+  left: 50%;
+  top: 90%;
+  transform: translate(-50%, -90%);
+}
